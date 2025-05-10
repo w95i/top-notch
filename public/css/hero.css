@@ -10,7 +10,7 @@
 
 .latter-img{
     width: 170px;
-    height: 257px !important;
+    height: 200px !important;
 }
 
 .changed-text {
@@ -32,7 +32,7 @@
 .content-hero{
     padding: 50px;
     position: absolute;
-    top: 40%;
+    top: 45%;
     right: 0;
     opacity: 0;
     animation: hidden 1s ease-in-out forwards;
@@ -40,9 +40,9 @@
 }
 
 .arrow-img{
-    width: 400px;
+    width: 350px;
     position: absolute;
-    top: 50%;
+    top: 58%;
     left: -30px;
     opacity: 0;
     transform: translateY(100px);
@@ -52,8 +52,9 @@
 
 @media (min-width: 1440px) {
     .latter-img{
-        width: 250px;
-        height: 370px !important;
+        width: 230px;
+        height: 105% !important;
+        margin-top: 12px;
     }
 }
 
@@ -82,17 +83,17 @@
         top: 30%;
     }
     100% {
-        top: calc(30% - 100px);
+        top: calc(30% - 120px);
     }
 }
 
 @keyframes arrowMove {
     0% {
-        transform: translateY(100px); /* Start from below */
+        transform: translateY(100px);
         opacity: 0;
     }
     100% {
-        transform: translateY(0); /* Reach the original position */
+        transform: translateY(0);
         opacity: 1;
     }
 }
