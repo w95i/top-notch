@@ -25,7 +25,7 @@ const HeroContent = () => {
     };
 
     return (
-        <div className='content-hero w-8/12'>
+        <div className='content-hero w-8/12 font-alex'>
             <div className="relative w-full h-96 overflow-hidden">
                 <div className="absolute inset-0 bg-opacity-50 flex items-center justify-start text-white p-8">
                     <div className='w-full h-[200px] flex flex-col justify-between'>

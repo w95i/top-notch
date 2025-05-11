@@ -37,7 +37,7 @@ export default function NavbarWithSidebar() {
             initial={false}
             animate={scrolled ? {y: 0, opacity: 1} : scrollAnimation}
             transition={{duration: 1, ease: 'easeOut'}}
-            className={`w-full h-24 z-10 py-1 fixed top-0 ${
+            className={`w-full h-24 z-10 py-1 fixed top-0 font-alex ${
                 scrolled ? 'bg-black ' : 'bg-transparent'
             }`}
         >

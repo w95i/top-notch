@@ -16,10 +16,10 @@
 .changed-text {
     background-color: #0535F6;
     padding: 0 5px;
-    display: inline-block;
     white-space: nowrap;
     overflow: hidden;
     max-width: max-content;
+    align-content: center;
 }
 
 .cursor {

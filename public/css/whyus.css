@@ -1,0 +1,26 @@
+.bg-linear {
+    background: linear-gradient(173.19deg, #062293 3.75%, #082EC4 94.67%);
+}
+
+.content-section {
+    position: absolute;
+    top: 15%;
+}
+
+.bg-us {
+    background-image: url("../Images/whyUs.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+@keyframes grow {
+    0%{
+        height: 0;
+        opacity: 0;
+    }
+    100%{
+        height: 100%;
+        opacity: 1;
+    }
+}
