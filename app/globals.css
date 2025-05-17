@@ -104,6 +104,7 @@
         padding: 0;
         margin: 0;
         box-sizing: border-box;
+        line-height: normal;
     }
 
     body {
@@ -113,5 +114,33 @@
 
     .font-alex {
         font-family: 'alexandria';
+    }
+
+    .service-bg{
+        background-image: url("/Images/serviceBg.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .booking-bg{
+        background-image: url("/Images/formLines.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .features-bg{
+        background-image: url("/Images/Lines.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .content-bg{
+        background-image: url("/Images/contetnBg.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
     }
 }

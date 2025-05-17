@@ -14,7 +14,7 @@ const contentVariants = {
 const WhyUs = () => {
     return (
         <>
-            <div className='w-full h-[100vh] flex justify-between px-16 py-[50px]'>
+            <div className='w-full h-[100vh] flex justify-between px-16 py-[50px] overflow-hidden'>
                 <div className='w-5/12 relative'>
                     <Image src={'/Images/dots-frame.png'} alt={'dots'} width={450} height={600} className={'mx-auto'}/>
                     <motion.div

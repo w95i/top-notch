@@ -1,7 +1,8 @@
 import type {Metadata} from "next";
 import "./globals.css";
-import  Navbar from "@/Components/Navbar/navbar";
+import Navbar from "@/Components/Navbar/navbar";
 import 'remixicon/fonts/remixicon.css'
+import Footer from "@/Components/Footer/Footer";
 
 export const metadata: Metadata = {
     title: "Top Notch",
@@ -15,10 +16,11 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-            <body>
-                <Navbar/>
+        <body className='min-h-dvh'>
+            <Navbar/>
                 {children}
-            </body>
+            <Footer/>
+        </body>
         </html>
     );
 }
