@@ -1,20 +1,19 @@
 "use client";
-import React, { useState } from 'react';
+import React, {useEffect, useState} from 'react';
 import { ChevronDown } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import {Definition} from "@/lib/types";
 
-const sections = [
-    {
-        id: 1,
-        title: 'Sydney Based',
-        content: 'We are a Sydney based company, more than 10 years of experience in this field',
-    },
-    { id: 2, title: 'Customer Service', content: 'Our customer service is available 24/7 to assist you.' },
-    { id: 3, title: 'Quality Assurance', content: 'We ensure top-notch quality in every project we undertake.' },
-    { id: 4, title: 'Latest Tech', content: 'Utilizing the latest technology to stay ahead in the industry.' },
-];
+interface Section extends Definition {
+    id: number;
+}
 
-const Accordion = () => {
+interface AccordionProps {
+    definitions : Definition[]
+}
+
+const Accordion = ({definitions} : AccordionProps) => {
+    const [sections, setSections] = useState<Definition[]>(definitions);
     const [openSection, setOpenSection] = useState<number | null>(null);
     const [closingSection, setClosingSection] = useState<number | null>(null);
 
@@ -32,17 +31,17 @@ const Accordion = () => {
 
     return (
         <div className="w-full font-alex">
-            {sections.map((section) => {
-                const isOpen = openSection === section.id;
-                const isClosing = closingSection === section.id;
+            {sections.map((section, index) => {
+                const isOpen = openSection === index;
+                const isClosing = closingSection === index;
 
                 return (
-                    <div key={section.id} className="border-b border-gray-300 bg-linear">
+                    <div key={index} className="border-b border-gray-300 bg-linear">
                         <div
                             className={`flex justify-between items-center p-4 cursor-pointer transition-all ${
                                 isOpen || isClosing ? 'text-white' : 'bg-white text-black'
                             }`}
-                            onClick={() => toggleSection(section.id)}
+                            onClick={() => toggleSection(index)}
                         >
                             <span className="text-lg font-semibold">{section.title}</span>
                             <ChevronDown
@@ -54,7 +53,7 @@ const Accordion = () => {
                         <AnimatePresence>
                             {isOpen && (
                                 <motion.div
-                                    key={section.id}
+                                    key={index}
                                     initial={{ height: 0, opacity: 0 }}
                                     animate={{ height: 'auto', opacity: 1 }}
                                     exit={{ height: 0, opacity: 0 }}
@@ -62,7 +61,7 @@ const Accordion = () => {
                                     className="overflow-hidden"
                                 >
                                     <div className="p-4 text-white">
-                                        <p>{section.content}</p>
+                                        <p>{section.descp}</p>
                                     </div>
                                 </motion.div>
                             )}

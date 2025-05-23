@@ -37,8 +37,10 @@ const HeroSlogan = () => {
 
 
     return (
-        <div className='title-hero w-11/12 md:h-56 xl:h-80 flex justify-between items-center'>
-            <div className="text-white sm:text-2xl md:text-3xl lg:text-3xl xl:text-5xl leading-16 p-7 font-bold uppercase">
+        <div className="title-hero w-full md:w-11/12  px-4 py-8 md:p-0 flex flex-col md:flex-row justify-between items-center">
+            <div className="text-white text-center md:text-left space-y-2
+                      text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl
+                      font-bold uppercase">
                 <p className='flex items-center gap-2'>
                     We are
                     <span className='w-auto'>

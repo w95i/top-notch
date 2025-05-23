@@ -1,6 +1,11 @@
 import React from 'react'
+import {contactUs} from "@/lib/types";
 
-const ContentSection = () => {
+interface ContentSectionProps {
+    contactUs: contactUs;
+}
+
+const ContentSection = ({contactUs}: ContentSectionProps) => {
     return (
         <>
             <div className="content-bg py-[50px] px-16">
@@ -16,8 +21,7 @@ const ContentSection = () => {
                             Address
                             <span className="absolute bottom-0 left-0 w-8 h-0.5 bg-blue-600"></span>
                         </h4>
-                        <p className="text-gray-700">9 Verge Place</p>
-                        <p className="text-gray-700">West Hoston NSW 2171</p>
+                        <p className="text-gray-700 text-wrap max-w-52">{contactUs.address}</p>
                     </div>
                     {/** Number **/}
                     <div>
@@ -25,8 +29,9 @@ const ContentSection = () => {
                             Number
                             <span className="absolute bottom-0 left-0 w-8 h-0.5 bg-blue-600"></span>
                         </h4>
-                        <p className="text-gray-700">02 9826 1225</p>
-                        <p className="text-gray-700">0473 676 139</p>
+                        <p className="text-gray-700">{contactUs.firstPhoneNumber}</p>
+                        {contactUs.secondPhoneNumber ? (
+                            <p className="text-gray-700 mt-1">{contactUs.secondPhoneNumber}</p>) : null}
                     </div>
                     {/** Email **/}
                     <div>
@@ -34,7 +39,7 @@ const ContentSection = () => {
                             Email Address
                             <span className="absolute bottom-0 left-0 w-8 h-0.5 bg-blue-600"></span>
                         </h4>
-                        <p className="text-gray-700">info@topnotchaccountants.com</p>
+                        <p className="text-gray-700">{contactUs.email}</p>
                     </div>
                 </div>
             </div>

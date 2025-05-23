@@ -37,12 +37,12 @@ export default function NavbarWithSidebar() {
             initial={false}
             animate={scrolled ? {y: 0, opacity: 1} : scrollAnimation}
             transition={{duration: 1, ease: 'easeOut'}}
-            className={`w-full h-24 z-10 py-1 fixed top-0 font-alex ${
+            className={`sm:max-w-10/12 px-4 md:max-w-full w-full h-24 z-10 py-1 fixed top-0 font-alex ${
                 scrolled ? 'bg-black ' : 'bg-transparent'
             }`}
         >
             <div
-                className="xl:max-w-10/12 lg:max-w-11/12 sm:max-w-screen-lg mx-auto py-4 flex justify-between items-center">
+                className="xl:max-w-10/12 lg:max-w-11/12 mx-auto py-4 flex justify-between items-center">
                     <Image src="/Images/logo.png" width={201} height={48} alt="logo"/>
                 {/* Desktop Links */}
                     <NavbarLinks/>

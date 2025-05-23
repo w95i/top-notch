@@ -4,7 +4,7 @@
 
 .content-section {
     position: absolute;
-    top: 15%;
+    top: 10%;
 }
 
 .bg-us {
@@ -12,6 +12,12 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+}
+
+@media  screen and (max-width: 560px){
+    .content-section {
+        position: relative;
+    }
 }
 
 @keyframes grow {

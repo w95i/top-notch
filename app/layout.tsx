@@ -3,6 +3,7 @@ import "./globals.css";
 import Navbar from "@/Components/Navbar/navbar";
 import 'remixicon/fonts/remixicon.css'
 import Footer from "@/Components/Footer/Footer";
+import {Toaster} from 'react-hot-toast'
 
 export const metadata: Metadata = {
     title: "Top Notch",
@@ -17,9 +18,18 @@ export default function RootLayout({
     return (
         <html lang="en">
         <body className='min-h-dvh'>
-            <Navbar/>
-                {children}
-            <Footer/>
+        <Navbar/>
+        <Toaster
+            position="top-right"
+            containerClassName={'font-alex'}
+            toastOptions={{
+                duration: 3000,
+                success: {duration: 4000},
+                error: {duration: 4000},
+            }}
+            />
+            {children}
+        <Footer/>
         </body>
         </html>
     );

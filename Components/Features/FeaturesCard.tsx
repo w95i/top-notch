@@ -1,19 +1,18 @@
 import React from 'react'
 import Link from "next/link";
+import {Service} from "@/lib/types";
 
 interface Card {
-    id: string | number;
-    title?: string;
-    description?: string;
+    cards : Service[];
 }
 
-const FeaturesCard = ({cards}: { cards: Card[] }) => {
+const FeaturesCard = ({cards}: Card) => {
     return (
         <>
             {cards.map((card) => (
                 <div
                     key={card.id}
-                    className="group border border-[#0000001A] rounded-4xl p-9 bg-white transform transition-all duration-300 ease-out hover:-translate-y-[50px] hover:bg-blue-600 flex flex-col gap-9">
+                    className={"group border border-[#0000001A] rounded-4xl p-9 bg-white transform transition-all duration-300 ease-out hover:-translate-y-[50px] hover:bg-blue-600 flex flex-col gap-9"}>
                     <div
                         className="w-24 h-24 bg-[#0B63E526] rounded-xl flex justify-center items-center transition-colors duration-300 group-hover:bg-blue-700">
                         <svg
@@ -33,7 +32,7 @@ const FeaturesCard = ({cards}: { cards: Card[] }) => {
                             {card.title}
                         </h3>
                         <p className="text-sm font-light font-alex leading-8 transition-colors duration-300 group-hover:text-white">
-                            {card.description}
+                            {card.descp}
                         </p>
                     </div>
 

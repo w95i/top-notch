@@ -1,6 +1,6 @@
 const links = [
   {href: '/', label: 'Home'},
-  {href: '/about', label: 'About'},
+  {href: '/#about', label: 'About'},
   {
     label: 'Accounting Services',
     dropdown: [
@@ -15,7 +15,7 @@ const links = [
       {href: '/services/mobile', label: 'Mobile Apps'},
     ],
   },
-  {href: '/contact', label: 'Contact us'},
+  {href: '/#booking', label: 'Contact us'},
 ]
 
 export default links
